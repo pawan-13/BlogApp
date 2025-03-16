@@ -1,3 +1,4 @@
+import SideBar from '@/Components/adminComponents/SideBar';
 import { ReactNode } from 'react';
 
 interface LayoutProps {
@@ -6,7 +7,12 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
     return (
-        <div> {children}</div>       
+        <>
+            <div className='flex'>
+                <SideBar />
+            </div>
+            <div> {children}</div>
+        </>
     )
 };
 
